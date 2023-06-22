@@ -1,2 +1,8 @@
 # Not necessary to include assignment rubric
 docs/assignment_rubric.md
+
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+.dart_tool
