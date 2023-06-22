@@ -97,8 +97,6 @@
 ## Condition System
 * Instead of using dates & times, the scheduler uses 'conditions' (an operator and a value). This allows events to be scheduled according to other events (e.g. "robotics meeting" start: AFTER "school day"), while still allowing time based conditions (e.g. "robotics meeting" start: AT 03:05pm).
 * Operators have a type that determines where they can be used (e.g. AFTER can only be used to specify a *start* condition).
-* A comma can be used to specify multiple operands for operators:
-	* `ON Tuesdays, Thursdays`
 
 ### Special Values
 * Format: Value
@@ -135,6 +133,13 @@
 * Null
 	* Type: *all*
 	* Meaning: A lack of a value.
+
+### Dart Compliant Dates
+* 
+
+### Dart Compliant Duration
+* Format: `#w #h #m #s`
+* Example: `1w 3h 2m 10s`
 
 ### Dates
 * Time:
@@ -273,7 +278,7 @@
 * Repeat condition (*condition*)
 	* Repeat event when *condition* true.
 	* e.g. EVERY 7 days
-	* e.g. ON Tuesday, Thursday
+	* e.g. ON Tuesday AND ON Thursday
 	* e.g. Weekdays
 
 * Repeat start condition & Repeat end condition (*condition*)
@@ -298,7 +303,7 @@
 	* `Start condition`: AFTER "school day" + 10 minutes
 	* `Can schedule until`: 10:00 PM
 	* `Minimum length`: 30 minutes
-	* `Repeat condition`: ON Tuesday, Thursday
+	* `Repeat condition`: ON Tuesday AND ON Thursday
 	* `Repeat start`: BEFORE "school year"
 	* `Repeat end`: BEFORE "robotics world championships"
 
