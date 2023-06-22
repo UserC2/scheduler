@@ -64,7 +64,7 @@
 		* Accept an array of events as input
 		* Output scheduled events in chronological order, providing their name, the time they start and the time they end.
 		* Print any events that cannot be scheduled in a seperate list.
-		* Set the appropriate `Interruption Status` and `Interrupted By` properties for interrupted events and display them to the user.
+		* Set the appropriate `Interrupted By` property for interrupted events and display them to the user.
 3. Working Event Log
 	* The event log is capable of recording events once they are marked as completed or interrupted.
 	* The event log records the data specified in `Additional Ideas` -> `Event Log`.
@@ -205,15 +205,10 @@
 	* e.g. "Physics Class - P4"
 	* Any unicode characters valid
 
-* Type (string)
+* Type (string default: *Name*)
 	* e.g. "Highschool Class"
 	* Any unicode characters valid
-
-* Interruption Status (all of the following are: boolean default: False)
-	* Cancelled
-	* Delayed
-	* Spliced
-	* Stopped
+	* If this is not specified, the value of `Name` will be used.
 
 * Interruption Reason (all of the following are: event default: null)
 	* Cancelled by
@@ -378,6 +373,6 @@ The schedule is regenerated after each operation.
 	* Elapsed Time
 	* Actual start time of event
 	* Actual end time of event
-	* Interruption Status
+	* Interruption Status (deduced from interruption reason)
 	* Interruption Reason
 * This allows the program to deduce information about an event (e.g. how long an event typically takes), and allows for duration-based conditions (e.g. '`Repeat end`: COMPLETED FOR 25 hours').
