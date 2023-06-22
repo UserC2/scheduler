@@ -95,7 +95,7 @@
 # Specifications
 
 ## Condition System
-* Instead of using dates & times, the scheduler uses 'conditions' (an operator and a value). This allows events to be scheduled according to other events (e.g. "robotics meeting" start: AFTER "school day"), while still allowing time based conditions (e.g. "robotics meeting" start: AT 3:05pm).
+* Instead of using dates & times, the scheduler uses 'conditions' (an operator and a value). This allows events to be scheduled according to other events (e.g. "robotics meeting" start: AFTER "school day"), while still allowing time based conditions (e.g. "robotics meeting" start: AT 03:05pm).
 * Operators have a type that determines where they can be used (e.g. AFTER can only be used to specify a *start* condition).
 * A comma can be used to specify multiple operands for operators:
 	* `ON Tuesdays, Thursdays`
@@ -191,6 +191,9 @@
 * Mathematical Operators: +, -, *, /
 	* Integer division is not allowed.
 * Assignment Operators: =, +=, -=, *=, /=
+* "\<string>":
+	* Type: *event*
+	* Indicates an event name.
 
 ## Activity Properties
 - `&` indicates related, but seperate properties.
@@ -270,8 +273,8 @@
 * Repeat condition (*condition*)
 	* Repeat event when *condition* true.
 	* e.g. EVERY 7 days
-	* e.g. ON Tuesdays, Thursdays
-	* e.g. All Weekdays
+	* e.g. ON Tuesday, Thursday
+	* e.g. Weekdays
 
 * Repeat start condition & Repeat end condition (*condition*)
 	* Restrict range of repeat to times where *condition* is true.
@@ -295,7 +298,7 @@
 	* `Start condition`: AFTER "school day" + 10 minutes
 	* `Can schedule until`: 10:00 PM
 	* `Minimum length`: 30 minutes
-	* `Repeat condition`: ON Tuesdays, Thursdays
+	* `Repeat condition`: ON Tuesday, Thursday
 	* `Repeat start`: BEFORE "school year"
 	* `Repeat end`: BEFORE "robotics world championships"
 
