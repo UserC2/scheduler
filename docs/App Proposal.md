@@ -210,7 +210,7 @@
 	* Any unicode characters valid
 	* If this is not specified, the value of `Name` will be used.
 
-* Interrupt Reason (all of the following are: event default: null)
+* Interrupted (all of the following are: event default: null)
 	* Cancelled by
 	* Delayed by
 	* Spliced by
@@ -373,6 +373,5 @@ The schedule is regenerated after each operation.
 	* Elapsed Time
 	* Actual start time of event
 	* Actual end time of event
-	* Interrupt Status (deduced from Interrupt Reason)
-	* Interruption Reason
+	* Interrupted (type + reason)
 * This allows the program to deduce information about an event (e.g. how long an event typically takes), and allows for duration-based conditions (e.g. '`Repeat end`: COMPLETED FOR 25 hours').
