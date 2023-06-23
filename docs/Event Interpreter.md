@@ -57,14 +57,14 @@ RawEvent(
 * **See `App Proposal.md` for Special Values, Operators, and Date & Time formatting.**
 * Returns three arrays:
 	* `invalidEvents`, array of `rawEvent`
-	* `staticEvents`, array of `interpretedEvent`
-	* `dependentEvents`, array of `interpretedEvent`
+	* `staticEvents`, array of `InterpretedEvent`
+	* `dependentEvents`, array of `InterpretedEvent`
 * For each `rawEvent` in `rawEvents`:
 	* Create a boolean variable `isDependent` = false.
 	* Call `rawEvent.isValidEvent()`.
 	* If `rawEvent.isValidEvent()` returns False:
 		* Continue to next `rawEvent`.
-	* Create an `interpretedEvent` with the `rawEvent` using `InterpretedEvent`'s constructor.
+	* Create an `InterpretedEvent` with the `rawEvent` using `InterpretedEvent`'s constructor.
 	* For each property in `rawEvent` other than `name`, `type`, and `isTransparent`:
 		* Run the Property Divider on the value of the property.
 		* If the returned `propertyWordTypes` contains one or more `PropertyWordType.event`:
@@ -72,8 +72,8 @@ RawEvent(
 			* **The `propertyWordTypes` and `propertyWords` arrays should be stored to avoid re-computing them later.**
 			* Move onto the next property.
 * If a `InvalidPropertyValue` exception was raised, save the invalid `rawEvent` to the `invalidEvents` array.
-* If `isDependent` is false, save the `interpretedEvent` to the `staticEvents` array.
-* If `isDependent` is true, save the `interpretedEvent` to the `dependentEvents` array.
+* If `isDependent` is false, save the `InterpretedEvent` to the `staticEvents` array.
+* If `isDependent` is true, save the `InterpretedEvent` to the `dependentEvents` array.
 
 ### Property Divider
 * This enum describes the different types that an operator/operand can be within a property:
