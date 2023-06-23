@@ -149,8 +149,8 @@
 	* Dates are specified using the following formats:
 	* `DD/MM/YYYY`
 		* Example: 09/06/2023
-	* `Day Month DD YYYY`
-		* Example: Friday June 09 2023
+	* `Month DD YYYY`
+		* Example: June 09 2023
 * To specify a date and time, seperate the date and time with ` : `:
 	* Example: Friday June 09 2023 : 05:04 PM
 	* Example: 09/06/2023 : 17:04
