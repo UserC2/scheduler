@@ -18,7 +18,7 @@ End condition: '30/06/2023'
 Name: Grade 11 S2 School Day
 Transparent: True
 Repeat condition: ON Weekdays
-Repeat start: BEFORE "Grade 11 School Year"
+Repeat start: '01/02/2023'
 Repeat end: AFTER "Grade 11 School Year
 
 Name: Physics P4
@@ -76,7 +76,7 @@ Maximum length: '30 minutes'
 	* "Robotics World Championships" scheduled from '01/05/2023' to '07/05/2023.
 * `dependentEvents` Loop 1:
 	* "Grade 11 S2 School Day" depends on existing event "Grade 11 School Year".
-		* Schedule it from "Grade 11 School Year".start to "Grade 11 School Year.end repeating on weekdays.
+		* Schedule it from '01/02/2023' to "Grade 11 School Year.end repeating on weekdays.
 * `dependentEvents` Loop 2:
 	* "Physics P4" depends on existing event "Grade 11 S2 School Day".
 		* Schedule it on each "Grade 11 S2 School Day" between '01:40 PM' and '02:55 PM'.
