@@ -133,8 +133,17 @@
 * Null
 	* Type: *all*
 	* Meaning: A lack of a value.
+* Special Dates:
+	* Weekdays
+		* Alias for `Monday, Tuesday, Wednesday, Thursday, Friday`
+	* Weekends
+		* Alias for `Saturday, Sunday`
+	* Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+		* Matches respective day.
+	* January, February, March, April, May, June, July, August, September, October, November, December
+		* Matches respective month.
 
-### Dates
+### Date & Time
 * Time:
 	* Format: `HH:MM:SS AM/PM`
 	* Hours:Minutes:Seconds AM/PM
@@ -154,15 +163,6 @@
 * To specify a date and time, seperate the date and time with ` : `:
 	* Example: Friday June 09 2023 : 05:04 PM
 	* Example: 09/06/2023 : 17:04
-* Special Values:
-	* Weekdays
-		* Alias for `Monday, Tuesday, Wednesday, Thursday, Friday`
-	* Weekends
-		* Alias for `Saturday, Sunday`
-	* Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-		* Matches respective day.
-	* January, February, March, April, May, June, July, August, September, October, November, December
-		* Matches respective month.
 
 ### Operators
 * Format: OPERATOR NAME \<parameter>
