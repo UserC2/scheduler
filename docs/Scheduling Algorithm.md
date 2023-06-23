@@ -57,3 +57,14 @@ Name: Reference
 Start condition: BEFORE "Circular"
 Maximum length: '30 minutes'
 ```
+
+### Schedule All Events
+* Provided with `staticEvents` and `dependentEvents` arrays (both an array of `InterpretedEvent`).
+* For each `InterpretedEvent` in `staticEvents`:
+	* Evaluate each condition for the event and convert them to iCalendar dates.
+		* If a range is specified, schedule the event at the start of the range for `Maximum length` or until `End condition`.
+* Repeat until all events in `dependentEvents` are scheduled or no events in `dependentEvents` refer to scheduled events:
+	* For each `InterpretedEvent` in `dependentEvents`:
+		* if the event being referred to by the dependent property is scheduled, convert the property into a time then schedule it as a static event.
+* If any events remain unscheduled in `dependentEvents`, display a "Invalid Dependency" error and specify the name of each remaining event, then continue.
+	* If any events remain unscheduled in `dependentEvents` and do not refer to scheduled events, then any remaining events must refer to nonexistent events or refer to each other, which makes them impossible to schedule.
