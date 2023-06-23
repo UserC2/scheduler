@@ -188,7 +188,6 @@
 * Logical Operators: AND, OR, XOR, NOT, ==
 * Mathematical Operators: +, -, *, /
 	* Integer division is not allowed.
-* Assignment Operators: =, +=, -=, *=, /=
 * "\<string>":
 	* Type: *event*
 	* Indicates an event name.
