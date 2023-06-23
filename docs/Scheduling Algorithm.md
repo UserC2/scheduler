@@ -69,6 +69,8 @@ Maximum length: '30 minutes'
 		* if the event being referred to by the dependent property is scheduled, convert the property into a time then schedule it as a static event.
 * If any events remain unscheduled in `dependentEvents`, display an "Invalid Dependency" error and specify the name of each remaining event, then continue.
 	* If any events remain unscheduled in `dependentEvents` and do not refer to scheduled events, then any remaining events must refer to nonexistent events or refer to each other, which makes them impossible to schedule.
+* Add all scheduled events (as modified `InterpretedEvent`s) to `scheduledEvents` array.
+* Add all valid non-scheduled events (as modified `InterpretedEvent`s) to `cancelledEvents` array.
 
 ### Example
 * `staticEvents`:
