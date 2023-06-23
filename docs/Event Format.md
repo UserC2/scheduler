@@ -14,3 +14,29 @@ Property2: E2-Property2-Value
 * `\n` seperates properties (each property is on a different line).
 * The property name is specified between `\n` (the start of the line) and `:`.
 * The property value is specified between `:` and `\n` (the end of the line).
+
+## During Interpretation
+* Events are stored in a Dart class:
+```dart
+class RawEvent {
+	String? name;
+	String? type;
+	bool? isTransparent;
+	String? interrupts;
+	String? minLength;
+	String? maxLength;
+	String? startCondition;
+	String? endCondition;
+	String? canScheduleFrom;
+	String? canScheduleUntil;
+	String? repeatCondition;
+	String? repeatStartCondition;
+	String? repeatEndCondition;
+
+	bool isValidEvent() {
+		return (name != null) && (type != null)
+			&& ((startCondition != null) || (canScheduleFrom != null))
+			&& ((endCondition != null) || (canScheduleUntil != null) || (maxLength != null));
+	}
+}
+```
