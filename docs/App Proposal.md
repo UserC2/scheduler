@@ -127,9 +127,6 @@
 * Yearly
 	* Type: *repeat condition*
 	* Meaning: True once for every year.
-* Never
-	* Type: *repeat end condition*
-	* Meaning: Always true.
 * Null
 	* Type: *all*
 	* Meaning: A lack of a value.
