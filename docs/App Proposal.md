@@ -144,6 +144,7 @@
 		* Matches respective month.
 
 ### Date & Time
+* Surround dates and times with single quotes (`'`).
 * Time:
 	* Format: `HH:MM:SS AM/PM`
 	* Hours:Minutes:Seconds AM/PM
@@ -191,6 +192,9 @@
 * "\<string>":
 	* Type: *event*
 	* Indicates an event name.
+* '\<string>':
+	* Type: *datetime*
+	* Indicates a date/time.
 
 ## Activity Properties
 - `&` indicates related, but seperate properties.
@@ -224,8 +228,8 @@
 	* Interrupt events matching *event-type*.
 	* Example:
 		* `Name`: Dentist Appointment
-		* `Start condition`: 02:05 PM
-		* `Maximum length`: 1 hour
+		* `Start condition`: '02:05 PM'
+		* `Maximum length`: '1 hour'
 		* `Interrupts`: All
 		* Interrupts all events starting at 14:05 PM on the day it is scheduled for 1 hour or until completed.
 
@@ -233,8 +237,8 @@
 	* Schedule event for at least `Minimum length` and at most `Maximum length`.
 	* Example:
 		* `Name`: Physics Homework
-		* `Min length`: 30 minutes
-		* `Max length`: 120 minutes
+		* `Min length`: '30 minutes'
+		* `Max length`: '120 minutes'
 		* Event will be scheduled for at least 30 minutes and marked as completed after 120 minutes.
 	* Min and max are compatible with ONE OF start and end condition only.
 	* Min and max are not compatible with start and end condition used together.
@@ -243,8 +247,8 @@
 	* Schedule start/end of event when condition is true.
 	* Example:
 		* `Name`: Physics P4
-		* `Start condition`: AT 1:40 PM
-		* `End condition`: AT 2:55 PM
+		* `Start condition`: AT '01:40 PM'
+		* `End condition`: AT '02:55 PM'
 	* When `Start condition` specified, cannot use:
 		* Can schedule from
 	* When `End condition` specified, cannot use:
@@ -257,8 +261,8 @@
 	* Allow event to be scheduled starting at `Can schedule from` *condition* and ending at `Can schedule until` *condition*.
 	* Example
 		* `Name`: Robotics Meeting
-		* `Start condition`: AT 03:05 PM
-		* `Can schedule until`: AT 8:30 PM
+		* `Start condition`: AT '03:05 PM'
+		* `Can schedule until`: AT '08:30 PM'
 		* Event will be scheduled starting at 3:05 PM and continue until completed or until 8:30 PM.
 	* When `Can schedule from` specified, cannot use:
 		* Start condition
@@ -269,7 +273,7 @@
 
 * Repeat condition (*condition*)
 	* Repeat event when *condition* true.
-	* e.g. EVERY 7 days
+	* e.g. EVERY '7 days'
 	* e.g. ON Tuesday AND ON Thursday
 	* e.g. Weekdays
 
@@ -285,16 +289,16 @@
 
 ## Activity Examples
 * `Name`: Physics P4
-	* `Start condition`: AT 1:40pm
-	* `End condition`: AT 2:55pm
+	* `Start condition`: AT '01:40 PM'
+	* `End condition`: AT '02:55 PM'
 	* `Interrupts`: All
 	* `Repeat condition`: ON Weekdays
 	* `Repeat start`: BEFORE "grade 11 semester 2"
 	* `Repeat end`: AFTER "grade 11 semester 2"
 * `Name`: Robotics Weekday Meeting
-	* `Start condition`: AFTER "school day" + 10 minutes
-	* `Can schedule until`: 10:00 PM
-	* `Minimum length`: 30 minutes
+	* `Start condition`: AFTER "school day" + '10 minutes'
+	* `Can schedule until`: '10:00 PM'
+	* `Minimum length`: '30 minutes'
 	* `Repeat condition`: ON Tuesday AND ON Thursday
 	* `Repeat start`: BEFORE "school year"
 	* `Repeat end`: BEFORE "robotics world championships"

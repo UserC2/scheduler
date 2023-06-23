@@ -9,9 +9,9 @@
 ### Example Event:
 ```
 Name: Robotics Weekday Meeting
-Start condition: AFTER "school day" + 10m
-Can schedule until: 10:00 PM
-Minimum length: 30m
+Start condition: AFTER "school day" + '10 minutes'
+Can schedule until: '10:00 PM'
+Minimum length: '30 minutes'
 Repeat condition: ON Tuesday AND ON Thursday
 Repeat start: BEFORE "school year"
 Repeat end: BEFORE "robotics world championships"
