@@ -134,13 +134,6 @@
 	* Type: *all*
 	* Meaning: A lack of a value.
 
-### Dart Compliant Dates
-* 
-
-### Dart Compliant Duration
-* Format: `#w #h #m #s`
-* Example: `1w 3h 2m 10s`
-
 ### Dates
 * Time:
 	* Format: `HH:MM:SS AM/PM`
