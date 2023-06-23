@@ -127,9 +127,6 @@
 * Yearly
 	* Type: *repeat condition*
 	* Meaning: True once for every year.
-* Null
-	* Type: *all*
-	* Meaning: A lack of a value.
 * Special Dates:
 	* Weekdays
 		* Alias for `Monday, Tuesday, Wednesday, Thursday, Friday`
